@@ -1,4 +1,4 @@
-public class ProductInvoiceVM : PersistableViewModelBase<VInvoice>
+public class ProductInvoiceVM : PersistableViewModelBase
 {
     protected override ICommandModel GetCommandModel()
     {
