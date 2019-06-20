@@ -20,16 +20,18 @@ namespace RockPaperScissors
                 Console.WriteLine("Make your move: " + string.Join(", ", rps.Weapons) + ", quit");
  
                 string weapon = Console.ReadLine().Trim().ToLower();
- 
+                
+                // Quit the game
                 if (weapon == "quit")
                     break;
- 
+                    
+                // Checks if user inputs a valid weapon from the weapon list
                 if (!rps.Weapons.Contains(weapon))
                 {
                     Console.WriteLine("Invalid weapon!");
                     continue;
                 }
- 
+                
                 int result = rps.Next(weapon);
  
                 Console.WriteLine("You chose {0} and your opponent chose {1}!", weapon, rps.LastAIWeapon);
